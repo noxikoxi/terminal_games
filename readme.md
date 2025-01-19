@@ -31,6 +31,10 @@ To play, run them without any  options.
   
 ## Game Rules and Controls
 
+![Snake](images/snake.png)
+
+![Minesweeper](images/minesweeper.png)
+
 
 ### Snake
 

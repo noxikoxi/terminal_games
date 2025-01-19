@@ -174,13 +174,13 @@ print_instructions(){
     move_cursor_to 1 $((cols+2))
     printf "MINESWEEPER"
     move_cursor_to 2 $((cols+2))
-    printf "Nacinij q aby wyjsc"
+    printf "Press q to exit"
     move_cursor_to 3 $((cols+2))
-    printf "Poruszanie się -> w/s/a/d"
+    printf "Moving around -> w/s/a/d"
     move_cursor_to 4 $((cols+2))
-    printf "Odkryj komórke -> o"
+    printf "Show cell -> o"
     move_cursor_to 5 $((cols+2))
-    printf "Postaw falgę -> p"
+    printf "Set flag -> p"
 }
 
 change_selected(){
@@ -303,12 +303,12 @@ if [ $gameOver -eq "1" ]; then
     move_cursor_to 1 $((cols+2))
     printf "BOOOM!!!\r\n"
     move_cursor_to 2 $((cols+2))
-    printf "KONIEC GRY\r\n"
+    printf "GAME OVER\r\n"
 elif [ $gameOver -eq "2" ]; then
     move_cursor_to 1 $((cols+2))
-    printf "GRATULACJE!!!\r\n"
+    printf "CONGRATULATIONS!!!\r\n"
     move_cursor_to 2 $((cols+2))
-    printf "WYGRAŁEŚ\r\n"
+    printf "YOU WON\r\n"
 fi
 # cursor valid position
 move_cursor_to $((rows+2)) 0

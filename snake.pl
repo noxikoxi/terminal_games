@@ -62,14 +62,14 @@ sub get_valid_integer {
     my ($min, $max) = @_; # validation range
 
     while (1) {
-        print "Podaj wielkość planszy gry z przedziału [$min, $max]: ";
+        print "Enter the size of board from range [$min, $max]: ";
         chomp(my $input = <STDIN>);
 
         # check if input is integer and in range
         if ($input =~ /^\d+$/ && $input >= $min && $input <= $max) {
             return $input;
         } else {
-            print "Błąd: podaj liczbę całkowitą w przedziale [$min, $max].\n";
+            print "Error: enter integer from range [$min, $max].\n";
         }
     }
 }
@@ -250,11 +250,11 @@ sub print_instructions{
     move_cursor_to(1, $boardSize+2);
     print "SNAKE";
     move_cursor_to(2, $boardSize+2);
-    print "Nacinij q aby wyjsc";
+    print "Press q to exit";
     move_cursor_to(3, $boardSize+2);
-    print "Poruszanie się -> w/s/a/d";
+    print "Moving around -> w/s/a/d";
     move_cursor_to(4, $boardSize+2);
-    print "Wynik: $score";
+    print "Score: $score";
 }
 
 $boardSize = get_valid_integer(10, 30);
@@ -326,12 +326,12 @@ while (!$gameOver) {
 
 if ( $gameOver == 1 ){
     move_cursor_to(7, $boardSize+2);
-    printf "KONIEC GRY\r\n";
+    printf "GAME OVER GRY\r\n";
 }elsif ( $gameOver == 2){
     move_cursor_to(7, $boardSize+2);
-    printf "GRATULACJE!!!\r\n";
+    printf "CONGRATULATIONS!!!\r\n";
     move_cursor_to(8, $boardSize+2);
-    printf "WYGRAŁEŚ\r\n";
+    printf "YOU WON\r\n";
 }
 
 # currect cursor postion
